@@ -37,7 +37,7 @@ public class DataCollector implements QuarkusApplication {
     @ConfigProperty(name = "failed.projects.file", defaultValue = "failedProjects.txt")
     Path failedProjectsFile;
 
-    @ConfigProperty(name = "store.full.souce.code", defaultValue = "false")
+    @ConfigProperty(name = "store.full.souce.code", defaultValue = "true")
     boolean storeFullSourceCode;
 
     @ConfigProperty(name = "thread.count")

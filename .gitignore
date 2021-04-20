@@ -3,6 +3,8 @@
 .classpath
 .settings/
 bin/
+volumes/
+storage/
 
 # IntelliJ
 .idea
