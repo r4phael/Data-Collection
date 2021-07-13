@@ -299,6 +299,9 @@ public class AppBean {
 			RefactoringType.EXTRACT_INTERFACE, RefactoringType.EXTRACT_SUPERCLASS, RefactoringType.MERGE_OPERATION,
 			RefactoringType.EXTRACT_AND_MOVE_OPERATION, RefactoringType.CONVERT_ANONYMOUS_CLASS_TO_TYPE,
 			RefactoringType.INTRODUCE_POLYMORPHISM, RefactoringType.RENAME_PACKAGE);
+	
+		/*Set.of(RefactoringType.EXTRACT_VARIABLE,
+			RefactoringType.INLINE_VARIABLE, RefactoringType.PARAMETERIZE_VARIABLE);*/
 
 	private class RefactoringHandlerImpl extends RefactoringHandler {
 
@@ -322,7 +325,7 @@ public class AppBean {
 			}
 
 			refactoringsToProcess = refactoringsToProcess.stream()
-					// .filter(r -> REFACTORINGMINER_1_TYPES.contains(r.getRefactoringType()))
+					.filter(r -> REFACTORINGMINER_1_TYPES.contains(r.getRefactoringType()))
 					.collect(Collectors.toList());
 			return !refactoringsToProcess.isEmpty();
 		}
